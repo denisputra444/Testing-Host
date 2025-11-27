@@ -1,0 +1,77 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Neon Tic Tac Toe</title>
+    <link rel="stylesheet" href="DENIS.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Screen -->
+        <div id="homeScreen">
+            <div class="logo">🐧 LINUX TIC TAC TOE</div>
+            <div class="subtitle">Dennskie</div>
+            <div class="menu">
+                <button class="menu-btn" onclick="startGame('easy')">play --mode=easy</button>
+                <button class="menu-btn" onclick="startGame('normal')">play --mode=normal</button>
+                <button class="menu-btn" onclick="startGame('hard')">play --mode=hard</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen">
+            <div class="game-header">
+                <div class="game-title">🐧 LINUX TIC TAC TOE</div>
+                <div class="game-info">
+                    <div class="info-item">
+                        <span class="info-label">MODE</span>
+                        <span class="info-value" id="modeDisplay">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">WINS</span>
+                        <span class="info-value" id="winsDisplay">0</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">LOSSES</span>
+                        <span class="info-value" id="lossesDisplay">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status" id="status">Your turn (X)</div>
+
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+
+            <div class="controls">
+                <button class="btn" onclick="resetGame()">Reset</button>
+                <button class="btn btn-home" onclick="goHome()">Home</button>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal" id="modal">
+            <div class="modal-content" id="modalContent">
+                <div class="penguin">🐧</div>
+                <div class="modal-title" id="modalTitle"></div>
+                <div class="modal-message" id="modalMessage"></div>
+                <div class="modal-buttons">
+                    <button class="btn" onclick="playAgain()">Play Again</button>
+                    <button class="btn btn-home" onclick="goHome()">Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="DENIS.js"></script>
+</body>
+</html>
